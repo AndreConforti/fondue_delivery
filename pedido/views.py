@@ -70,7 +70,7 @@ def finalizar_pedido(request):
 
             )
         
-            request.session['carrinho'].clear()
+            request.session['carrinho'].clear()  ## apaga os itens do carrinho
             request.session.save()
             return render(request, 'pedido_realizado.html')
         else:
